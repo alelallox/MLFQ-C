@@ -30,3 +30,10 @@ Il programma legge i processi da un file di testo in cui ogni riga contiene **4 
 
 ```text
 <PID> <DURATA> <PRIORITA> <INGRESSO>
+
+**Esempio:**
+```text
+1 6 2 0
+2 4 2 0
+3 5 1 2
+4 3 0 3
