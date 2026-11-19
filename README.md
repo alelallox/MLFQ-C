@@ -1,7 +1,6 @@
-# MLFQ-C
-# Simulatore CPU Scheduler (Multilevel Queue con Prelazione, Round Robin e Aging)
+# Simulatore CPU Scheduler Multi-Level Feedback Queue in C
 
-Simulatore in linguaggio C di uno **scheduler della CPU a code multilivello (MLQ)** con supporto a:
+Simulatore in linguaggio C di uno **scheduler della CPU a code multilivello (MLFQ)** con supporto a:
 - **3 livelli di priorità** (`0` = massima priorità, `1` = media, `2` = minima)
 - **Prelazione (Preemption)** immediata all'arrivo o alla promozione di un processo più prioritario
 - **Round Robin** intra-coda con quanto di tempo configurabile
@@ -12,7 +11,7 @@ Simulatore in linguaggio C di uno **scheduler della CPU a code multilivello (MLQ
 
 ## Caratteristiche principali
 
-1. **Code a Priorità (`NUM_CODE = 3`):**
+1. **Code a Priorità (`3`):**
    I processi vengono smistati in tre *ready queue* separate (implementate tramite liste concatenate con puntatori `head` e `tail` per inserimenti ed estrazioni in tempo $O(1)$).
 2. **Prelazione:**
    A ogni *tick* di clock, se nella coda a priorità più alta è presente un processo con priorità superiore rispetto a quello attualmente in CPU, il processo corrente viene interrotto, rimesso in fondo alla propria coda e sostituito.
